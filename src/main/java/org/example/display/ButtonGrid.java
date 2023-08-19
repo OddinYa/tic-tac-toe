@@ -1,6 +1,7 @@
 package org.example.display;
 
 import org.example.job.Application;
+import org.example.model.Field;
 import org.example.model.Figure;
 import org.example.servis.Rules;
 
@@ -59,16 +60,20 @@ public class ButtonGrid {
                 int option = JOptionPane.showOptionDialog(null, "Игрок " + rules.getWinner() + " Победил! Хотите сыграть еще?", "Победа", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[]{"Сыграть еще", "Выход"}, "Сыграть еще");
 
                 if (option == JOptionPane.YES_OPTION) {
+                    frame.dispose();
+                    rules.getField().clear();
                     Application.runApp();
 
                 } else {
                     exit(0);
                 }
             }
-            if(rules.getCounterToButtonClick() == clickCount){
+            else if(rules.getCounterToButtonClick() == clickCount){
                 int option = JOptionPane.showOptionDialog(null, "Ничья! Хотите сыграть еще?", "Победа", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[]{"Сыграть еще", "Выход"}, "Сыграть еще");
 
                 if (option == JOptionPane.YES_OPTION) {
+                    frame.dispose();
+                    rules.getField().clear();
                     Application.runApp();
 
                 } else {

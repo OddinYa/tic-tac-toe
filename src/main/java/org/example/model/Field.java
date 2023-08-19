@@ -29,4 +29,8 @@ public class Field {
         this.field[i][j] = playerChar;
         countToClick ++ ;
     }
+
+    public void clear(){
+        instance = null;
+    }
 }
