@@ -2,12 +2,13 @@ package org.example.model;
 
 public class Field {
 
+    private int countToClick = 0;
     private static Field instance;
     private char[][] field;
 
     private Field(){
         field = new char[3][3];
-        filling(field);
+
     }
     public static Field getInstance() {
         if (instance == null) {
@@ -15,17 +16,17 @@ public class Field {
         }
         return instance;
     }
+    public int getCountToClick() {
+        return countToClick;
+    }
 
-    private void filling(char[][] field){
-
-        for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field.length; j++) {
-                field[i][j] = ' ';
-            }
-        }
+    public char[][] getField(){
+        return field;
     }
 
 
-
-
+    public void setField(int i,int j,char playerChar) {
+        this.field[i][j] = playerChar;
+        countToClick ++ ;
+    }
 }
