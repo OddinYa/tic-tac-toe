@@ -1,4 +1,4 @@
-package org.example.servis;
+package org.example.service;
 
 import org.example.model.Field;
 

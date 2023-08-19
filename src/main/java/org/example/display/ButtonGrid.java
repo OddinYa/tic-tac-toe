@@ -1,9 +1,8 @@
 package org.example.display;
 
 import org.example.job.Application;
-import org.example.model.Field;
 import org.example.model.Figure;
-import org.example.servis.Rules;
+import org.example.service.Rules;
 
 import javax.swing.*;
 import java.awt.*;
